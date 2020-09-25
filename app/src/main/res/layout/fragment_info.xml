@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:isScrollContainer="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:hint="@string/inputCity"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone|flagNoExtractUi"
+                android:inputType="text|textNoSuggestions"
+                android:lines="1"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:tag="tagEditText"
+                android:text=""
+                android:textSize="@dimen/text16" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/buttonSearch"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_medium_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:backgroundTint="@color/colorAccent"
+            android:tag="tagButtonSearch"
+            android:text="@string/search"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSearch" />
+
+        <TextView
+            android:id="@+id/textViewNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginTop="@dimen/activity_vertical_medium_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textSize="@dimen/notificationText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSearch" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="@dimen/activity_horizontal_average_margin"
+            android:gravity="center_horizontal"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNotification" />
+
+
+        <TextView
+            android:id="@+id/textViewPlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginTop="@dimen/activity_vertical_medium_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/colorTan"
+            android:textSize="@dimen/captionText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+            android:layout_marginTop="@dimen/activity_vertical_medium_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textSize="@dimen/notificationText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlace" />
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutSun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:baselineAligned="false"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLocation">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageViewSunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/activity_horizontal_medium_margin"
+                    android:background="@null"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/sunrise"
+                    app:srcCompat="@drawable/ic_sunrise_100px" />
+
+                <TextView
+                    android:id="@+id/textViewFirstLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageViewSunrise"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_medium_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_medium_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                    android:text="@string/firstLight"
+                    android:textColor="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/textViewSunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewFirstLight"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_medium_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_medium_margin"
+                    android:gravity="center_horizontal"
+                    android:text="@string/sunriseTime" />
+
+                <TextView
+                    android:id="@+id/textViewSunriseTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewSunrise"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_medium_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_medium_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_small_margin"
+                    android:text="@string/time"
+                    android:textColor="@color/colorTan" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/relativeLayoutLeft"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageViewSunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/activity_horizontal_medium_margin"
+                    android:background="@null"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/sunset"
+                    app:srcCompat="@drawable/ic_sunset_100px" />
+
+                <TextView
+                    android:id="@+id/textViewSunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageViewSunset"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_medium_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_small_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_medium_margin"
+                    android:text="@string/sunsetTime" />
+
+                <TextView
+                    android:id="@+id/textViewSunsetTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewSunset"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_medium_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_medium_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_small_margin"
+                    android:gravity="center_horizontal"
+                    android:text="@string/time"
+                    android:textColor="@color/colorRed" />
+
+                <TextView
+                    android:id="@+id/textViewLastLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewSunsetTime"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_medium_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_medium_margin"
+                    android:gravity="center_horizontal"
+                    android:text="@string/lastLight"
+                    android:textColor="@color/colorGrey" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textViewDayLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativeLayoutLeft"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/activity_horizontal_average_margin"
+                android:layout_marginTop="@dimen/activity_vertical_medium_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_average_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_average_margin"
+                android:text="@string/dayLength" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

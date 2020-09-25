@@ -1,0 +1,15 @@
+﻿<resources>
+
+    <dimen name="activity_horizontal_medium_margin">12dp</dimen>
+    <dimen name="activity_horizontal_average_margin">24dp</dimen>
+
+    <dimen name="activity_vertical_small_margin">8dp</dimen>
+    <dimen name="activity_vertical_medium_margin">12dp</dimen>
+    <dimen name="activity_vertical_average_margin">24dp</dimen>
+    <dimen name="activity_vertical_big_margin">32dp</dimen>
+
+    <dimen name="text16">16sp</dimen>
+    <dimen name="captionText">20sp</dimen>
+    <dimen name="notificationText">14sp</dimen>
+
+</resources>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">SunriseSunset</string>
+    <string name="inputCity">Please input your city</string>
+    <string name="search">Search</string>
+    <string name="firstLight">First light at %s</string>
+    <string name="lastLight">Last light at %s</string>
+    <string name="sunriseTime">Sunrise time:</string>
+    <string name="sunsetTime">Sunset time:</string>
+    <string name="dayLength">Day length</string>
+    <string name="dayLengthText">Day length: %d hours, %d minutes</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="time">Time</string>
+    <string name="location">%s\nLatitude: %s\nLongitude: %s\nTime zone: %s</string>
+    <string name="locationPlace">%s, %s, %s %s</string>
+    <string name="today">Today</string>
+
+    <string name="noConnection">There is no internet connection found. Please check the network settings, setup WiFi.</string>
+    <string name="networkSettings">Network settings</string>
+    <string name="noLocation">No GPS coordinates found. Please turn on Location service.</string>
+    <string name="noInputFound">Please input name of the city</string>
+    <string name="searchNotFound">Search city not found</string>
+    <string name="gpsSettings">GPS settings</string>
+
+</resources>
