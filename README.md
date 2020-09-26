@@ -35,7 +35,7 @@ To reduce number of network connections, I use Google Room database to store sea
     5. Store search result in Room database to prevent redundant network request
 
 ### Google Places API - not used in this application.
-    No reason to pay the bills due to alternative services on the market.
+    No reason to pay the Google bills due to alternative, free of charge services on the market.
     I prefer to use open source project with MIT license or similar.
     OpenStreetMap Nominatim API Endpoints service provide search by city name to get its coordinate and other data.
 
