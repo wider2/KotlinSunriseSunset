@@ -31,7 +31,7 @@ To reduce number of network connections, I use Google Room database to store sea
     1. Detect network connection
     2. Determine local GPS coordinates
     3. Get Api request to server with current coordinates to get time of sunrise and sunset
-    4. Provide search ability to get coordinates by city name
+    4. Provide search ability to get coordinates by city name with help of OpenStreetMap Api
     5. Store search result in Room database to prevent redundant network request
 
 ### Google Places API - not used in this application.
@@ -40,6 +40,7 @@ To reduce number of network connections, I use Google Room database to store sea
     OpenStreetMap Nominatim API Endpoints service provide search by city name to get its coordinate and other data.
 
 ### Time zones
-    The most tricky part was wrong timezone of the date, because Sunrise Api server returns date in UTC 00:00.
+    The most tricky part was idea to improve timezone of the date, because Sunrise Api server returns date in UTC 00:00.
+    But UTC 00:00 is not practical, we need to see the time of certain place according to local timezone.
     Therefore I have used LatLongToTimezone open source project, that allows to define timezone by coordinate.
     https://github.com/drtimcooper/LatLongToTimezone
