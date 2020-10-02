@@ -3,8 +3,8 @@ Kotlin based project to show sunrise / sunset time of your current place or make
 To reduce number of network connections, I use Google Room database to store search results.
 
 ### How does it work
-    This application is written 100% Kotlin and Kotlin language became a standard in native Android development.
-    Application has a quite clean architecture with different layers based on MVVM:
+    This application is written on Kotlin mostly. Kotlin language became a standard in native Android development.
+    Application has a attempt to reach a clean architecture with different layers based on MVVM:
         UI layer, activity and fragments
         ViewModel as a bridge between interactive View and Model
         Domain layer - Use Cases
